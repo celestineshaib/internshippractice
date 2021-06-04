@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eitsecgh</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<body>
+    <div class="container">
+        <div class="navbar" style="box-shadow: 0 0 10px 0 rgb(29, 29, 29);">
+            <div class="logo">
+                <a href=""><img src="images/eitsec.jpg" width="120px"></a>
+            </div>
+            
+            <nav>
+                <ul id="Menuitems">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Training</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <img src="images/menu.png" class="menubtn" onclick="menutoggle()"> 
+            
+        </div>   
+        <h2> EITSEC - EMPLOYEE - MANAGEMENT - SYSTEMS </h2>     
+    </div>
+        
+    <!------account page ------->
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/core3.png" width="100%">          
+                </div>               
+
+                <div class="col-2">
+                   <div class="form-container">
+                       <div class="form-btn">
+                           <span onclick="Login()">Admin Login</span>
+                           <span onclick="Register()">Employee Login</span>
+                           <hr id="Indicator">
+                       </div>
+                       <form id="Loginform">
+                        <input type="text" placeholder="Username" name="Username">
+                        <input type="password" placeholder="Password" name="Password">
+                        <button type="submit" class="btn">Login </button>
+                        <a href="">Forgot Pasword</a>
+                       </form>
+                       <form id="Regform" action="connect.php" method="post">
+                        <input type="text" placeholder="Username" name="Username">
+                        <input type="email" placeholder="Email" name="Email">
+                        <input type="password" placeholder="Password" name="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forgot Pasword</a>                        
+                       </form>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+ 
+    <!--footer-->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p> Download App for Android and iOS mobile devices </p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/eitsec.jpg" width="80px" height="80px">
+                     <p> We are confident that we will be able to create an 
+                         exceptional system that will meet and exceed our 
+                         existing and prospective Client’s expectations and 
+                         vision for all related IT services and products in 
+                         your businesses. </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3> Useful Links </h3>
+                     <ul>
+                         <li>Home</li>
+                         <li>Services</li>
+                         <li>Projects</li>
+                         <li>Training</li>
+                         <li>About</li>
+                         <li>Contact</li>
+                     </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3> Follow us </h3>
+                     <ul>
+                         <li>Facebook</li>
+                         <li>Instagram</li>
+                         <li>Twitter</li>
+                         <li>YouTube</li>
+                     </ul>
+                </div>
+            </div>
+            <hr>
+            
+              <p class="copyright">Copyright &copy; 2021 | SUS-SHAIB-CELESTINE
+                  <br> &trade; Powered by | SyberSolutions
+              </p> 
+                                                                                     
+        </div>
+    </div>
+
+    <!-----js for toggle menu------>
+
+    <script>
+
+        var Menuitems = document.getElementById("Menuitems")
+
+        Menuitems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if( Menuitems.style.maxHeight == "0px")
+                {
+                Menuitems.style.maxHeight = "200px";
+                }
+            else
+                {
+                     Menuitems.style.maxHeight = "0px";
+                }
+        }
+
+    </script>
+
+    <!-----js for toggle form------>
+
+    <script>
+
+        var Loginform = document.getElementById("Loginform");
+        var Regform = document.getElementById("Regform");
+        var Indicator = document.getElementById("Indicator");
+
+        function Register(){
+            Regform.style.transform = "translateX(0px)";
+            Loginform.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(160px)";
+        }
+        function Login(){
+            Regform.style.transform = "translateX(300px)";
+            Loginform.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(17px)";
+        }
+
+    </script>
+
+
+</body>
+</html>
